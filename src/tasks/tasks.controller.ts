@@ -21,8 +21,8 @@ export class TasksController {
   }
 
   @Get()
-  findAll(): Task[] {
-    return this.tasksService.findAll();
+  async findAll(): Promise<Task[]> {
+    return Promise.resolve(this.tasksService.findAll());
   }
 
   /*   @Get(':id')
