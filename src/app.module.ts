@@ -3,8 +3,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TasksModule } from './tasks/tasks.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { EventosModule } from './eventos/eventos.module';
-import { UsuariosModule } from './usuarios/usuarios.module';
 
 @Module({
   imports: [
@@ -15,8 +13,6 @@ import { UsuariosModule } from './usuarios/usuarios.module';
       entities: [__dirname + '/**/*.entity{.ts,.js}'], // Ruta a las entidades
       synchronize: true, // Crea las tablas automaticamente (solo para desarrollo)
     }),
-    EventosModule,
-    UsuariosModule,
   ],
   controllers: [AppController],
   providers: [AppService],
