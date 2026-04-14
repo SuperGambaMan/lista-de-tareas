@@ -8,14 +8,14 @@ export class Evento {
   @Column()
   title!: string;
 
-  @Column()
-  description!: string;
+  @Column({ type: 'text', nullable: true })
+  description?: string | null;
 
   @Column()
   date!: Date;
 
-  @Column()
-  location!: string;
+  @Column({ type: 'text', nullable: true })
+  location?: string | null;
 
   @Column({ default: false })
   iscompleted!: boolean;

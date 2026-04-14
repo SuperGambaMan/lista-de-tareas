@@ -6,13 +6,15 @@ export class CreateEventoDto {
   title!: string;
 
   @IsString()
-  description!: string;
+  @IsOptional()
+  description?: string;
 
   @IsDateString()
   date!: string;
 
   @IsString()
-  location!: string;
+  @IsOptional()
+  location?: string;
 
   @IsBoolean()
   @IsOptional()
